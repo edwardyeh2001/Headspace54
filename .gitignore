@@ -29,6 +29,7 @@ yarn-error.*
 # macOS
 .DS_Store
 *.pem
+._*
 
 # local env files
 .env*.local
@@ -39,3 +40,16 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDEs and editors
+.vscode/
+
+# Metro bundler cache
+.expo/cache/
+.expo/tmp/

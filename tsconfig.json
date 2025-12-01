@@ -1,6 +1,33 @@
 {
+  // 继承 Expo 官方基础配置，保证和 Expo CLI 一致
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    // 关键修复：支持 expo/tsconfig.base 中的 customConditions
+    "moduleResolution": "node16",
+    "module": "node16",
+
+    // JSX 转换方式，React 18+ 推荐
+    "jsx": "react-jsx",
+
+    // 严格模式，帮助发现潜在错误
+    "strict": true,
+
+    // 常见兼容选项
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    // 目标环境
+    "target": "esnext",
+    "lib": ["esnext"],
+
+    // Expo Router 类型支持
+    "types": ["expo-router"]
+  },
+  // 包含源码目录
+  "include": ["src"]
 }
+
